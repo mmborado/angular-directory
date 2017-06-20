@@ -1,0 +1,11 @@
+<h2> Friend Listing </h2>
+
+<ul class="friend-listing">
+    <li *ngFor="let friend of friends">
+      <div class="single-friend">
+        <span [ngStyle]="{background: friend.belt}"> {{ friend.belt }} belt</span>
+        <h3> {{ friend.name }} </h3>
+        <div (click)="remove($event)" [attr.data-name]="friend.name"> delete</div>
+      </div>
+  </li>
+</ul>

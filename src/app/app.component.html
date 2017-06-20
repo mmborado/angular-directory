@@ -4,11 +4,12 @@
 </h1>  
   <nav>
     <ul>
-      <li>link</li>
-      <li>link</li>
-    </ul>
+       <li><a routerLink="/" routerLinkActive="active">Home</a></li> 
+        <li><a routerLink="/directory" routerLinkActive="active">Directory</a></li>
+   </ul>
   </nav>
 <section id="main">
-    <app-home>content inside tags</app-home>
+    <app-home [ninja]="ninja" (onYell)="yell($event)">content inside tags</app-home>
+    <router-outlet></router-outlet>
 </section>
 </header>
