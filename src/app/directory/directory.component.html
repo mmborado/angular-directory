@@ -1,11 +1,16 @@
 <h2> Friend Listing </h2>
-
+<form id="fitler">
+  <label> Filter friends by name: </label>
+  <input type="text" [(ngModel)]="term" name="filter-friend"/>
+</form>
 <ul class="friend-listing">
-    <li *ngFor="let friend of friends">
+    <li *ngFor="let friend of friends | filter:term">
       <div class="single-friend">
         <span [ngStyle]="{background: friend.belt}"> {{ friend.belt }} belt</span>
-        <h3> {{ friend.name }} </h3>
+        <h3> {{ friend.name}} </h3>
         <div (click)="remove($event)" [attr.data-name]="friend.name"> delete</div>
       </div>
   </li>
 </ul>
+
+<button (click)="logIt()"> Log me </button>
