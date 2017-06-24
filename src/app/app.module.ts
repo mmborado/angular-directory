@@ -15,7 +15,7 @@ import { LoggingService } from './logging.service';
     AppComponent,
     HomeComponent,
     DirectoryComponent,
-    FilterPipe
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
